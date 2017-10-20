@@ -1,6 +1,12 @@
 #terrain settings
 scaleXZ 6000.0
-scaleY 0.0
+scaleY 600.0
+
+heightmap ./res/heightmap/hm0.bmp
+
+tessellationFactor 600
+tessellationSlope 1.8
+tessellationShift 0.1
 
 #lod_ranges
 lod1_range 1750

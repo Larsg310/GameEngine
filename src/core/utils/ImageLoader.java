@@ -18,7 +18,7 @@ import java.nio.file.Paths;
 public class ImageLoader
 {
     
-    public static int loadImage(String file)
+    public static int[] loadImage(String file)
     {
         
         ByteBuffer imageBuffer;
@@ -59,7 +59,7 @@ public class ImageLoader
         
         STBImage.stbi_image_free(image);
         
-        return texId;
+        return new int[]{texId, w.get(), h.get()};
     }
     
     public static ByteBuffer loadImageToByteBuffer(String file)

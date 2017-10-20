@@ -19,7 +19,7 @@ public class Camera
     private Vec3f previousForward;
     private Vec3f up;
     
-    private float movAmt = 0.1f;
+    private float movAmt = 0.5f;
     private float rotAmt = 0.8f;
     
     private Matrix4f viewMatrix;
@@ -93,7 +93,8 @@ public class Camera
         if (Input.getInstance().isKeyHold(GLFW.GLFW_KEY_LEFT)) rotateY(-rotAmt / 8f);
         if (Input.getInstance().isKeyHold(GLFW.GLFW_KEY_RIGHT)) rotateY(rotAmt / 8f);
         
-        if (Input.getInstance().isKeyHold(GLFW.GLFW_KEY_SPACE)) move(yAxis, .5F);
+        if (Input.getInstance().isKeyHold(GLFW.GLFW_KEY_SPACE)) move(yAxis, 0.5F);
+        if (Input.getInstance().isKeyHold(GLFW.GLFW_KEY_LEFT_SHIFT)) move(yAxis, -0.5F);
         
         // free mouse rotation
         if (Input.getInstance().isButtonHolding(GLFW.GLFW_MOUSE_BUTTON_MIDDLE))

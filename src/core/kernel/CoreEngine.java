@@ -13,8 +13,8 @@ public class CoreEngine
 {
     
     private static int FPS;
-    private static float frameRate = 200;
-    private static float frameTime = 1.0f / frameRate;
+    private static float frameRate = 500;
+    private static float frameTime = 1.0F / frameRate;
     private boolean isRunning;
     private RenderingEngine renderingEngine;
     
@@ -74,6 +74,7 @@ public class CoreEngine
                 if (frameCounter >= Constants.NANOSECOND)
                 {
                     setFPS(frames);
+                    System.out.println("FPS: "+FPS);
                     frames = 0;
                     frameCounter = 0;
                 }
